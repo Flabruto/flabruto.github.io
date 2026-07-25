@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Fausto Labruto | Radiologist, Academic and Author</title>
@@ -10,6 +11,17 @@
         content="Official website of Fausto Labruto, radiologist, academic, researcher and author.">
 
   <style>
+    :root {
+      --navy: #18324a;
+      --navy-dark: #102536;
+      --gold: #a8874d;
+      --paper: #f5f3ee;
+      --white: #ffffff;
+      --text: #292929;
+      --muted: #646464;
+      --border: #d8d3c9;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -20,157 +32,315 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #f7f7f5;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--paper);
       line-height: 1.7;
     }
 
-    header {
-      background: #17283b;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    a {
+      color: var(--navy);
     }
 
-    header .name {
-      font-size: 1.3rem;
+    a:hover {
+      color: var(--gold);
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .header-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: normal;
       letter-spacing: 0.5px;
     }
 
+    .site-subtitle {
+      margin: 3px 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.83rem;
+      color: #dbe3e9;
+      letter-spacing: 0.4px;
+    }
+
+    nav {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
     nav a {
-      color: white;
+      color: var(--white);
       text-decoration: none;
-      margin-left: 22px;
-      font-size: 0.95rem;
+      margin-left: 24px;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #f0d8aa;
     }
 
     .hero {
-      min-height: 560px;
-      padding: 90px 8%;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, #e9eef2, #ffffff);
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      padding: 72px 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-label {
+      margin: 0 0 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: bold;
     }
 
     .hero h1 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(3rem, 6vw, 5.2rem);
       font-weight: normal;
-      color: #17283b;
-      line-height: 1.05;
+      line-height: 1;
     }
 
     .hero h2 {
-      margin: 0 0 25px;
+      margin: 0 0 27px;
+      color: var(--muted);
+      font-size: 1.3rem;
       font-weight: normal;
-      font-size: 1.45rem;
-      color: #536270;
+      line-height: 1.45;
     }
 
     .hero p {
-      max-width: 760px;
-      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 20px;
-      margin-right: 12px;
       padding: 11px 20px;
-      background: #17283b;
-      color: white;
+      margin: 0 10px 10px 0;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: var(--white);
       text-decoration: none;
-      border-radius: 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .button:hover {
+      background: var(--navy-dark);
+      color: var(--white);
     }
 
     .button.secondary {
       background: transparent;
-      color: #17283b;
-      border: 1px solid #17283b;
+      color: var(--navy);
     }
 
-    section {
-      padding: 70px 8%;
-      max-width: 1200px;
+    .button.secondary:hover {
+      background: #edf1f4;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 8px solid var(--white);
+      outline: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    main {
+      width: min(1120px, 88%);
       margin: auto;
     }
 
-    section h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.2rem;
-      font-weight: normal;
-      color: #17283b;
-      margin-top: 0;
+    .content-section {
+      padding: 67px 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    .cards {
+    .section-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 65px;
     }
 
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 6px;
-      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.25;
     }
 
-    .card h3 {
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      margin-top: 18px;
+      background: var(--gold);
+    }
+
+    .section-content p:first-child {
       margin-top: 0;
-      color: #17283b;
     }
 
-    .book-title {
+    .academic-entry {
+      margin-bottom: 32px;
+    }
+
+    .academic-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .academic-entry h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    .academic-entry .position {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .academic-entry p {
+      margin: 0;
+    }
+
+    .book {
+      padding: 0 0 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .book:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .book h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: normal;
       font-style: italic;
     }
 
-    .links a {
-      display: inline-block;
-      margin-right: 18px;
-      margin-bottom: 10px;
-      color: #254f73;
+    .book-meta {
+      margin: 0 0 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 14px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .profile-links a {
+      padding: 11px 0;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-note {
+      background: var(--white);
+      padding: 25px 28px;
+      border-left: 4px solid var(--gold);
     }
 
     footer {
-      background: #17283b;
-      color: white;
+      margin-top: 0;
+      padding: 34px 6%;
+      background: var(--navy-dark);
+      color: #d9e0e5;
       text-align: center;
-      padding: 30px;
-      margin-top: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
     }
 
-    @media (max-width: 700px) {
-      header {
+    @media (max-width: 850px) {
+      .header-inner {
+        padding: 22px 0;
         display: block;
       }
 
       nav {
-        margin-top: 12px;
+        margin-top: 18px;
       }
 
       nav a {
         display: inline-block;
-        margin: 5px 14px 5px 0;
+        margin: 5px 18px 5px 0;
       }
 
-      .hero {
-        padding-top: 65px;
-        padding-bottom: 65px;
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .portrait {
+        width: min(310px, 100%);
+        height: 390px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-inner {
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.1rem;
+      }
+
+      .profile-links {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -178,149 +348,276 @@
 
 <body>
 
-  <header>
-    <div class="name">Fausto Labruto</div>
+  <header class="site-header">
+    <div class="header-inner">
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Professional work</a>
-      <a href="#books">Books</a>
-      <a href="#links">Profiles</a>
-    </nav>
+      <div>
+        <!-- EDIT YOUR NAME OR HEADER DESCRIPTION HERE -->
+        <p class="site-title">Fausto Labruto</p>
+        <p class="site-subtitle">
+          Radiology · Academic Research · Medical Education · Ancient History
+        </p>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#research">Research</a>
+        <a href="#books">Books</a>
+        <a href="#profiles">Profiles</a>
+      </nav>
+
+    </div>
   </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div>
+        <!-- EDIT THE MAIN INTRODUCTION HERE -->
+        <p class="hero-label">Official website</p>
+
+        <h1>Fausto Labruto</h1>
+
+        <h2>
+          Radiologist, academic, researcher and author
+        </h2>
+
+        <p>
+          I am Associate Professor of Radiology at Karolinska Institutet
+          and Head of Emergency Radiology at TMC–Unilabs.
+        </p>
+
+        <p>
+          My professional interests include emergency and trauma radiology,
+          international teleradiology, medical education and the responsible
+          application of artificial intelligence in diagnostic imaging.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button" href="#about">Biography</a>
+          <a class="button secondary" href="#books">Books</a>
+        </div>
+      </div>
+
+      <div>
+        <!-- CHANGE THE FILENAME HERE IF YOU RENAME YOUR PHOTOGRAPH -->
+        <img
+          class="portrait"
+          src="fausto-labruto.jpg.png"
+          alt="Portrait of Fausto Labruto">
+      </div>
+
+    </div>
+  </section>
 
   <main>
 
-<section class="hero">
+    <section class="content-section" id="about">
+      <div class="section-grid">
 
-<div style="display:flex;align-items:center;justify-content:space-between;gap:50px;flex-wrap:wrap;">
-
-<div class="hero-content">
-        <h1>Fausto Labruto</h1>
-
-        <h2>Radiologist · Academic · Researcher · Author</h2>
-
-        <p>
-          Associate Professor of Radiology at Karolinska Institutet and
-          Head of Emergency Radiology at TMC–Unilabs. My professional work
-          focuses on emergency radiology, teleradiology, medical education
-          and artificial intelligence in diagnostic imaging.
-        </p>
-
-        <a class="button" href="#about">About me</a>
-        <a class="button secondary" href="#books">Books</a>
-  </div>
-
-<div>
-
-<img src="fausto-labruto.jpg.png"
-     alt="Fausto Labruto"
-     style="width:320px;
-            border-radius:12px;
-            box-shadow:0 10px 30px rgba(0,0,0,.25);">
-
-</div>
-
-</div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-
-      <p>
-        I am a radiologist, academic and author with a particular interest
-        in emergency radiology, trauma imaging and the responsible
-        application of artificial intelligence in healthcare.
-      </p>
-
-      <p>
-        Alongside my medical and academic career, I write about ancient
-        history and languages, especially the Hittites, the Etruscans and
-        the civilizations of the ancient Mediterranean and Near East.
-      </p>
-    </section>
-
-    <section id="work">
-      <h2>Professional work</h2>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>Emergency Radiology</h3>
-          <p>
-            Clinical leadership, emergency imaging, trauma radiology and
-            international teleradiology services.
-          </p>
+        <div class="section-heading">
+          <h2>Biography</h2>
         </div>
 
-        <div class="card">
-          <h3>Research and Education</h3>
+        <div class="section-content">
+          <!-- EDIT YOUR BIOGRAPHY HERE -->
           <p>
-            Academic research, postgraduate teaching, scientific
-            publications and invited international lectures.
+            Fausto Labruto is a radiologist, academic and author whose
+            professional work combines clinical radiology, academic research,
+            postgraduate education and international teleradiology.
           </p>
-        </div>
 
-        <div class="card">
-          <h3>Artificial Intelligence</h3>
           <p>
-            Research and professional work concerning AI implementation,
-            evaluation, transparency and real-world monitoring in radiology.
+            His principal medical interests include emergency radiology,
+            trauma imaging, acute abdominal imaging and the evaluation and
+            implementation of artificial intelligence in clinical practice.
+          </p>
+
+          <p>
+            Alongside his medical career, he writes about ancient history
+            and languages, with particular interests in the Hittites,
+            the Etruscans and the civilizations of the ancient Mediterranean
+            and Near East.
           </p>
         </div>
 
       </div>
     </section>
 
-    <section id="books">
-      <h2>Books</h2>
+    <section class="content-section" id="appointments">
+      <div class="section-grid">
 
-      <div class="cards">
-
-        <div class="card">
-          <h3 class="book-title">The Quest for the Hittites</h3>
-          <p>
-            A history of the rediscovery of the Hittite civilization,
-            published by McFarland.
-          </p>
+        <div class="section-heading">
+          <h2>Academic and professional appointments</h2>
         </div>
 
-        <div class="card">
-          <h3 class="book-title">A Language Like No Other</h3>
-          <p>
-            A journey through the history, survival and interpretation of
-            the Etruscan language.
-          </p>
+        <div class="section-content">
+
+          <!-- EDIT OR ADD PROFESSIONAL APPOINTMENTS HERE -->
+          <div class="academic-entry">
+            <h3>Karolinska Institutet</h3>
+            <p class="position">Associate Professor of Radiology</p>
+            <p>
+              Academic research, teaching and postgraduate medical education
+              in radiology.
+            </p>
+          </div>
+
+          <div class="academic-entry">
+            <h3>TMC–Unilabs</h3>
+            <p class="position">Head of Emergency Radiology</p>
+            <p>
+              Clinical and professional leadership in emergency radiology,
+              trauma imaging and international teleradiology services.
+            </p>
+          </div>
+
         </div>
 
       </div>
     </section>
 
-    <section id="links">
-      <h2>Professional profiles</h2>
+    <section class="content-section" id="research">
+      <div class="section-grid">
 
-      <div class="links">
-<a href="https://orcid.org/0009-0004-6510-5812"
-   target="_blank" rel="noopener">ORCID</a>
+        <div class="section-heading">
+          <h2>Research and teaching</h2>
+        </div>
 
-<a href="YOUR-GOOGLE-SCHOLAR-LINK"
-   target="_blank" rel="noopener">Google Scholar</a>
+        <div class="section-content">
 
-<a href="https://au.linkedin.com/in/fausto-labruto-007568142"
-   target="_blank" rel="noopener">LinkedIn</a>
+          <!-- EDIT YOUR RESEARCH DESCRIPTION HERE -->
+          <div class="academic-entry">
+            <h3>Emergency and trauma radiology</h3>
+            <p>
+              Research, clinical development and postgraduate teaching
+              concerning acute imaging, trauma and emergency care.
+            </p>
+          </div>
 
-<a href="https://www.researchgate.net/profile/Fausto-Labruto"
-   target="_blank" rel="noopener">ResearchGate</a>
+          <div class="academic-entry">
+            <h3>Artificial intelligence in radiology</h3>
+            <p>
+              Evaluation, implementation, transparency and real-world
+              monitoring of artificial intelligence systems in diagnostic
+              radiology.
+            </p>
+          </div>
+
+          <div class="academic-entry">
+            <h3>International medical education</h3>
+            <p>
+              Lectures, conference teaching, mentorship and academic
+              collaboration in emergency radiology and related fields.
+            </p>
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
+    <section class="content-section" id="books">
+      <div class="section-grid">
 
+        <div class="section-heading">
+          <h2>Books</h2>
+        </div>
+
+        <div class="section-content">
+
+          <!-- EDIT BOOK INFORMATION HERE -->
+          <article class="book">
+            <h3>The Quest for the Hittites</h3>
+            <p class="book-meta">McFarland, 2022</p>
+            <p>
+              A history of the rediscovery of the Hittite civilization and
+              the scholars, explorers and archaeologists who reconstructed
+              its forgotten past.
+            </p>
+          </article>
+
+          <article class="book">
+            <h3>A Language Like No Other</h3>
+            <p class="book-meta">Forthcoming</p>
+            <p>
+              A journey through the history, survival and interpretation
+              of the Etruscan language.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="profiles">
+      <div class="section-grid">
+
+        <div class="section-heading">
+          <h2>Professional profiles</h2>
+        </div>
+
+        <div class="section-content">
+
+          <div class="profile-links">
+
+            <a href="https://orcid.org/0009-0004-6510-5812"
+               target="_blank"
+               rel="noopener">
+              ORCID
+            </a>
+
+            <!-- REPLACE THIS WITH YOUR GOOGLE SCHOLAR ADDRESS -->
+            <a href="#"
+               target="_blank"
+               rel="noopener">
+              Google Scholar
+            </a>
+
+            <a href="https://au.linkedin.com/in/fausto-labruto-007568142"
+               target="_blank"
+               rel="noopener">
+              LinkedIn
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Fausto-Labruto"
+               target="_blank"
+               rel="noopener">
+              ResearchGate
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section" id="contact">
+      <div class="section-grid">
+
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="section-content">
+          <!-- EDIT YOUR CONTACT INFORMATION HERE -->
+          <div class="contact-note">
+            For academic, professional, publishing or speaking enquiries,
+            please contact me through LinkedIn or one of the professional
+            profiles listed above.
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
   <footer>
-    © 2026 Fausto Labruto
+    © 2026 Fausto Labruto. All rights reserved.
   </footer>
 
 </body>
