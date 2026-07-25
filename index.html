@@ -3,10 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fausto Labruto</title>
+
+  <title>Fausto Labruto | Radiologist, Academic and Author</title>
+
+  <meta name="description"
+        content="Official website of Fausto Labruto, radiologist, academic, researcher and author.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #f7f7f5;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #17283b;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .name {
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #e9eef2, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: normal;
+      color: #17283b;
+      line-height: 1.05;
+    }
+
+    .hero h2 {
+      margin: 0 0 25px;
+      font-weight: normal;
+      font-size: 1.45rem;
+      color: #536270;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 12px;
+      padding: 11px 20px;
+      background: #17283b;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: #17283b;
+      border: 1px solid #17283b;
+    }
+
+    section {
+      padding: 70px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.2rem;
+      font-weight: normal;
+      color: #17283b;
+      margin-top: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 6px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #17283b;
+    }
+
+    .book-title {
+      font-style: italic;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 18px;
+      margin-bottom: 10px;
+      color: #254f73;
+    }
+
+    footer {
+      background: #17283b;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 14px 5px 0;
+      }
+
+      .hero {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Fausto Labruto</h1>
-  <p>Personal website under construction.</p>
+
+  <header>
+    <div class="name">Fausto Labruto</div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Professional work</a>
+      <a href="#books">Books</a>
+      <a href="#links">Profiles</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Fausto Labruto</h1>
+
+        <h2>Radiologist · Academic · Researcher · Author</h2>
+
+        <p>
+          Associate Professor of Radiology at Karolinska Institutet and
+          Head of Emergency Radiology at TMC–Unilabs. My professional work
+          focuses on emergency radiology, teleradiology, medical education
+          and artificial intelligence in diagnostic imaging.
+        </p>
+
+        <a class="button" href="#about">About me</a>
+        <a class="button secondary" href="#books">Books</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+
+      <p>
+        I am a radiologist, academic and author with a particular interest
+        in emergency radiology, trauma imaging and the responsible
+        application of artificial intelligence in healthcare.
+      </p>
+
+      <p>
+        Alongside my medical and academic career, I write about ancient
+        history and languages, especially the Hittites, the Etruscans and
+        the civilizations of the ancient Mediterranean and Near East.
+      </p>
+    </section>
+
+    <section id="work">
+      <h2>Professional work</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Emergency Radiology</h3>
+          <p>
+            Clinical leadership, emergency imaging, trauma radiology and
+            international teleradiology services.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Research and Education</h3>
+          <p>
+            Academic research, postgraduate teaching, scientific
+            publications and invited international lectures.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Artificial Intelligence</h3>
+          <p>
+            Research and professional work concerning AI implementation,
+            evaluation, transparency and real-world monitoring in radiology.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="books">
+      <h2>Books</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3 class="book-title">The Quest for the Hittites</h3>
+          <p>
+            A history of the rediscovery of the Hittite civilization,
+            published by McFarland.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="book-title">A Language Like No Other</h3>
+          <p>
+            A journey through the history, survival and interpretation of
+            the Etruscan language.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Professional profiles</h2>
+
+      <div class="links">
+        <a href="#" target="_blank" rel="noopener">ORCID</a>
+        <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">ResearchGate</a>
+      </div>
+
+      <p>
+        The profile links will be added once their exact addresses have
+        been confirmed.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Fausto Labruto
+  </footer>
+
 </body>
 </html>
