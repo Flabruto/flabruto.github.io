@@ -8,6 +8,340 @@
 
   <meta name="description"
         content="Selected invited lectures, conference presentations and educational activities by Fausto Labruto in emergency radiology, trauma imaging and artificial intelligence.">
+<style>
+    :root {
+      --navy: #18324a;
+      --navy-dark: #102536;
+      --gold: #a8874d;
+      --paper: #f5f3ee;
+      --white: #ffffff;
+      --text: #292929;
+      --muted: #646464;
+      --border: #d8d3c9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--navy);
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .header-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+
+    .site-subtitle {
+      margin: 3px 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.83rem;
+      color: #dbe3e9;
+      letter-spacing: 0.4px;
+    }
+
+    nav {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      color: #f0d8aa;
+    }
+
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      padding: 72px 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-label {
+      margin: 0 0 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .hero h2 {
+      margin: 0 0 27px;
+      color: var(--muted);
+      font-size: 1.3rem;
+      font-weight: normal;
+      line-height: 1.45;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      margin: 0 10px 10px 0;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .button:hover {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .button.secondary:hover {
+      background: #edf1f4;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 8px solid var(--white);
+      outline: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    main {
+      width: min(1120px, 88%);
+      margin: auto;
+    }
+
+    .content-section {
+      padding: 67px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 65px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      margin-top: 18px;
+      background: var(--gold);
+    }
+
+    .section-content p:first-child {
+      margin-top: 0;
+    }
+
+    .academic-entry {
+      margin-bottom: 32px;
+    }
+
+    .academic-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .academic-entry h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    .academic-entry .position {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .academic-entry p {
+      margin: 0;
+    }
+
+    .book {
+      padding: 0 0 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .book:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .book h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .book-meta {
+      margin: 0 0 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 14px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .profile-links a {
+      padding: 11px 0;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-note {
+      background: var(--white);
+      padding: 25px 28px;
+      border-left: 4px solid var(--gold);
+    }
+
+    footer {
+      margin-top: 0;
+      padding: 34px 6%;
+      background: var(--navy-dark);
+      color: #d9e0e5;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner {
+        padding: 22px 0;
+        display: block;
+      }
+
+      nav {
+        margin-top: 18px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 18px 5px 0;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .portrait {
+        width: min(310px, 100%);
+        height: 390px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-inner {
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.1rem;
+      }
+
+      .profile-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
