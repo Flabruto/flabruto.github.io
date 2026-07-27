@@ -1,510 +1,473 @@
+ChatGPT Plus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yes — I can see exactly what went wrong now.
+
+The index.html file has accidentally had parts of the Lectures page inserted inside the Books and Profiles sections. That is why the homepage layout is broken.
+
+Do not try to repair those lines manually. The safest solution is to restore index.html to the version before this accidental insertion, then add only the navigation link again.
+
+In GitHub, open index.html → History. You said there are two recent commits both called “Update index”. Open the older of those two commits — the one immediately before the latest broken change.
+
+When you open it, look for a button/link such as “View file” or click the filename index.html in that commit.
+
+Once you are viewing that older version of the complete index.html, stop there and tell me. I’ll guide you through restoring that exact version without touching lectures.html.
+
+
+I can't find view file
+
+No problem. We can avoid “View file” entirely.
+
+Because the homepage is currently broken, the simplest safe method is to use GitHub's commit history to copy the known-good index.html.
+
+Do this
+You are looking at the commit history for index.html, with two commits called “Update index”.
+
+Click the older “Update index” commit.
+
+You should see a page showing changes, with red and green lines.
+
+Near the top of that page, look for the long commit identifier — a string of letters/numbers — and around it a <> icon or button labelled “Browse files”.
+
+Click “Browse files”.
+
+That should show the repository exactly as it existed at that older commit.
+
+Do not edit anything yet.
+
+Tell me whether you can see “Browse files”. If not, tell me exactly what buttons you see at the top of the commit page.
+
+
+yes I can see it and i clicked it
+
+Great. You should now be looking at the repository as it existed at that older commit.
+
+Next, open index.html from this older snapshot.
+
+When the file opens, click the “Raw” button. Then select all the HTML and copy it.
+
+Do not overwrite anything yet.
+
+Tell me once you have copied the full old index.html content.
+
+
+
+Pasted text.txt
+Document
+
+Yes — I have the old index.html you copied, and this version looks structurally correct. In particular, the Books, Profiles and Contact sections are properly closed, and there is only one <main> element. 
+
+
+Also, importantly, this good version already contains the “Lectures & Conferences” navigation link at line 401. 
+
+ So we do not need to modify the homepage again.
+
+Restore the homepage
+Go back to your repository's current version:
+
+Click the repository name near the top to return to the normal/current repository.
+
+Open index.html.
+
+Click the pencil icon to edit.
+
+Select everything in the current index.html (Ctrl+A while your cursor is inside the editor).
+
+Delete it.
+
+Paste the entire good version you just copied.
+
+Click “Commit changes…”.
+
+Use a message such as Restore homepage.
+
+Commit directly to main.
+
+Then open faustolabruto.com and refresh it.
+
+Do nothing to lectures.html yet.
+
+Tell me whether the homepage is back to its proper appearance.
+
+
+it does not let me it says I must be on a branch
+
+That message explains the problem: you are still viewing the historical snapshot created by “Browse files.” GitHub lets you view old files there, but you cannot edit them because you are looking at a specific commit, not the main branch.
+
+Do not change anything on that page.
+
+Return to the current main branch
+At the top-left of GitHub, click the name of your repository. That should take you back to the repository homepage.
+
+Then look above the file list for the branch selector. It should say:
+
+main
+
+Once you see main, open index.html from that file list and click the pencil/edit icon.
+
+At that point GitHub should allow editing.
+
+Tell me when you are back on main with the current index.html open in edit mode.
+
+
+no, it says that I MUST be on a branch to make changes
+
+Right — that message means GitHub is confirming you are still looking at a historical commit, which is a detached snapshot rather than a branch. My previous instruction did not get you out of that view.
+
+Do this instead
+At the very top of the GitHub page, you should see the repository path, something like:
+
+FaustoLabruto / [repository name]
+
+Click the repository name itself — not index.html, not the commit number, and not “Browse files.”
+
+You need to arrive at the normal repository page where the files are listed.
+
+Above the file list there should be a branch button/dropdown showing something like:
+
+main ▼
+
+Click that and select main if necessary.
+
+Then open:
+
+index.html
+
+and click the pencil icon.
+
+The warning “You must be on a branch to make or propose changes to this file” should now be gone.
+
+Do not paste anything until you reach that point. Tell me when the branch selector definitely says main.
+
+
+yes I am there now
+
+Good. Now we can restore the homepage safely.
+
+Restore index.html
+Since you are definitely on main:
+
+Open index.html.
+
+Click the pencil icon to edit.
+
+Click anywhere inside the code editor.
+
+Press Ctrl+A to select the entire current file.
+
+Press Delete/Backspace.
+
+Paste the complete good index.html that you copied from the historical version.
+
+Click “Commit changes…”.
+
+Enter:
+
+Restore homepage
+
+Choose “Commit directly to the main branch”.
+
+Click “Commit changes”.
+
+The good version already contains the Lectures & Conferences link, so we should make no further changes to index.html after restoring it. 
+
+
+Then open faustolabruto.com in a new tab and refresh it. Tell me whether the original homepage appearance is restored.
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/favicon.png">
-  
-  <title>Fausto Labruto | MD, PhD, Associate Professor of Radiology</title>
+<html lang="en"> <head> <meta charset="UTF-8">
 
-  <meta name="description"
-        content="Official website of Fausto Labruto, radiologist, academic, researcher and author.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --navy: #18324a;
-      --navy-dark: #102536;
-      --gold: #a8874d;
-      --paper: #f5f3ee;
-      --white: #ffffff;
-      --text: #292929;
-      --muted: #646464;
-      --border: #d8d3c9;
-    }
+<link rel="icon" type="image/png" href="/favicon.png"> <link rel="apple-touch-icon" href="/favicon.png">
 
-    * {
-      box-sizing: border-box;
-    }
+<title>Fausto Labruto | MD, PhD, Associate Professor of Radiology</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<meta name="description" content="Official website of Fausto Labruto, radiologist, academic, researcher and author.">
 
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--text);
-      background: var(--paper);
-      line-height: 1.7;
-    }
+<style> :root { --navy: #18324a; --navy-dark: #102536; --gold: #a8874d; --paper: #f5f3ee; --white: #ffffff; --text: #292929; --muted: #646464; --border: #d8d3c9; } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--text); background: var(--paper); line-height: 1.7; } a { color: var(--navy); } a:hover { color: var(--gold); } .site-header { background: var(--navy); color: var(--white); border-bottom: 5px solid var(--gold); } .header-inner { width: min(1120px, 88%); margin: auto; min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 30px; } .site-title { margin: 0; font-size: 1.55rem; font-weight: normal; letter-spacing: 0.5px; } .site-subtitle { margin: 3px 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 0.83rem; color: #dbe3e9; letter-spacing: 0.4px; } nav { font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; } nav a { color: var(--white); text-decoration: none; margin-left: 24px; } nav a:hover { color: #f0d8aa; } .hero { background: var(--white); border-bottom: 1px solid var(--border); } .hero-inner { width: min(1120px, 88%); margin: auto; padding: 72px 0; display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: center; gap: 65px; } .hero-label { margin: 0 0 12px; font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: 1.8px; color: var(--gold); font-size: 0.78rem; font-weight: bold; } .hero h1 { margin: 0 0 14px; color: var(--navy); font-size: clamp(3rem, 6vw, 5.2rem); font-weight: normal; line-height: 1; } .hero h2 { margin: 0 0 27px; color: var(--muted); font-size: 1.3rem; font-weight: normal; line-height: 1.45; } .hero p { max-width: 720px; margin: 0 0 18px; font-size: 1.08rem; } .hero-buttons { margin-top: 30px; } .button { display: inline-block; padding: 11px 20px; margin: 0 10px 10px 0; border: 1px solid var(--navy); background: var(--navy); color: var(--white); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; } .button:hover { background: var(--navy-dark); color: var(--white); } .button.secondary { background: transparent; color: var(--navy); } .button.secondary:hover { background: #edf1f4; } .portrait { width: 100%; height: 390px; object-fit: cover; object-position: center top; display: block; border: 8px solid var(--white); outline: 1px solid var(--border); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13); } main { width: min(1120px, 88%); margin: auto; } .content-section { padding: 67px 0; border-bottom: 1px solid var(--border); } .section-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 65px; } .section-heading h2 { margin: 0; color: var(--navy); font-size: 2rem; font-weight: normal; line-height: 1.25; } .section-heading::after { content: ""; display: block; width: 55px; height: 3px; margin-top: 18px; background: var(--gold); } .section-content p:first-child { margin-top: 0; } .academic-entry { margin-bottom: 32px; } .academic-entry:last-child { margin-bottom: 0; } .academic-entry h3 { margin: 0 0 5px; color: var(--navy); font-size: 1.25rem; font-weight: normal; } .academic-entry .position { margin: 0 0 9px; color: var(--muted); font-family: Arial, Helvetica, sans-serif; font-size: 0.92rem; } .academic-entry p { margin: 0; } .book { padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--border); } .book:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; } .book h3 { margin: 0 0 5px; color: var(--navy); font-size: 1.35rem; font-weight: normal; font-style: italic; } .book-meta { margin: 0 0 10px; font-family: Arial, Helvetica, sans-serif; color: var(--muted); font-size: 0.9rem; } .profile-links { display: grid; grid-template-columns: repeat(2, minmax(180px, 1fr)); gap: 14px 30px; font-family: Arial, Helvetica, sans-serif; } .profile-links a { padding: 11px 0; text-decoration: none; border-bottom: 1px solid var(--border); } .contact-note { background: var(--white); padding: 25px 28px; border-left: 4px solid var(--gold); } footer { margin-top: 0; padding: 34px 6%; background: var(--navy-dark); color: #d9e0e5; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 0.84rem; } @media (max-width: 850px) { .header-inner { padding: 22px 0; display: block; } nav { margin-top: 18px; } nav a { display: inline-block; margin: 5px 18px 5px 0; } .hero-inner { grid-template-columns: 1fr; gap: 42px; } .portrait { width: min(310px, 100%); height: 390px; } .section-grid { grid-template-columns: 1fr; gap: 30px; } } @media (max-width: 520px) { .hero-inner { padding: 50px 0; } .hero h1 { font-size: 3.1rem; } .profile-links { grid-template-columns: 1fr; } } </style>
 
-    a {
-      color: var(--navy);
-    }
+<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Person", "@id": "https://faustolabruto.com/#person", "name": "Fausto Labruto", "url": "https://faustolabruto.com/", "image": "https://faustolabruto.com/fausto-labruto.jpg.png", "description": "Radiologist, academic, researcher and author specialising in emergency radiology and ancient history.", "jobTitle": [ "Radiologist", "Associate Professor of Radiology", "Author" ], "affiliation": [ { "@type": "Organization", "name": "Unilabs", "url": "https://www.unilabs.com/" } ], "sameAs": [ "https://orcid.org/0009-0004-6510-5812", "https://scholar.google.com/citations?user=MyMecJwAAAAJ&hl=en&oi=ao", "https://www.linkedin.com/in/fausto-labruto-007568142", "https://www.amazon.com/stores/Fausto-Labruto/author/B0CJFJHKTR", "https://www.researchgate.net/profile/Fausto-Labruto", "https://academy.unilabs.com/radiology/mentors/529/fausto-labruto" ] } </script>
 
-    a:hover {
-      color: var(--gold);
-    }
-
-    .site-header {
-      background: var(--navy);
-      color: var(--white);
-      border-bottom: 5px solid var(--gold);
-    }
-
-    .header-inner {
-      width: min(1120px, 88%);
-      margin: auto;
-      min-height: 92px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .site-title {
-      margin: 0;
-      font-size: 1.55rem;
-      font-weight: normal;
-      letter-spacing: 0.5px;
-    }
-
-    .site-subtitle {
-      margin: 3px 0 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.83rem;
-      color: #dbe3e9;
-      letter-spacing: 0.4px;
-    }
-
-    nav {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 24px;
-    }
-
-    nav a:hover {
-      color: #f0d8aa;
-    }
-
-    .hero {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-inner {
-      width: min(1120px, 88%);
-      margin: auto;
-      padding: 72px 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .hero-label {
-      margin: 0 0 12px;
-      font-family: Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      color: var(--gold);
-      font-size: 0.78rem;
-      font-weight: bold;
-    }
-
-    .hero h1 {
-      margin: 0 0 14px;
-      color: var(--navy);
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      font-weight: normal;
-      line-height: 1;
-    }
-
-    .hero h2 {
-      margin: 0 0 27px;
-      color: var(--muted);
-      font-size: 1.3rem;
-      font-weight: normal;
-      line-height: 1.45;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 0 0 18px;
-      font-size: 1.08rem;
-    }
-
-    .hero-buttons {
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 20px;
-      margin: 0 10px 10px 0;
-      border: 1px solid var(--navy);
-      background: var(--navy);
-      color: var(--white);
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-    }
-
-    .button:hover {
-      background: var(--navy-dark);
-      color: var(--white);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--navy);
-    }
-
-    .button.secondary:hover {
-      background: #edf1f4;
-    }
-
-    .portrait {
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      border: 8px solid var(--white);
-      outline: 1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
-    }
-
-    main {
-      width: min(1120px, 88%);
-      margin: auto;
-    }
-
-    .content-section {
-      padding: 67px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: 65px;
-    }
-
-    .section-heading h2 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 2rem;
-      font-weight: normal;
-      line-height: 1.25;
-    }
-
-    .section-heading::after {
-      content: "";
-      display: block;
-      width: 55px;
-      height: 3px;
-      margin-top: 18px;
-      background: var(--gold);
-    }
-
-    .section-content p:first-child {
-      margin-top: 0;
-    }
-
-    .academic-entry {
-      margin-bottom: 32px;
-    }
-
-    .academic-entry:last-child {
-      margin-bottom: 0;
-    }
-
-    .academic-entry h3 {
-      margin: 0 0 5px;
-      color: var(--navy);
-      font-size: 1.25rem;
-      font-weight: normal;
-    }
-
-    .academic-entry .position {
-      margin: 0 0 9px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.92rem;
-    }
-
-    .academic-entry p {
-      margin: 0;
-    }
-
-    .book {
-      padding: 0 0 28px;
-      margin-bottom: 28px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .book:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .book h3 {
-      margin: 0 0 5px;
-      color: var(--navy);
-      font-size: 1.35rem;
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    .book-meta {
-      margin: 0 0 10px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .profile-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(180px, 1fr));
-      gap: 14px 30px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .profile-links a {
-      padding: 11px 0;
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contact-note {
-      background: var(--white);
-      padding: 25px 28px;
-      border-left: 4px solid var(--gold);
-    }
-
-    footer {
-      margin-top: 0;
-      padding: 34px 6%;
-      background: var(--navy-dark);
-      color: #d9e0e5;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
-    }
-
-    @media (max-width: 850px) {
-      .header-inner {
-        padding: 22px 0;
-        display: block;
-      }
-
-      nav {
-        margin-top: 18px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 18px 5px 0;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 42px;
-      }
-
-      .portrait {
-        width: min(310px, 100%);
-        height: 390px;
-      }
-
-      .section-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .hero-inner {
-        padding: 50px 0;
-      }
-
-      .hero h1 {
-        font-size: 3.1rem;
-      }
-
-      .profile-links {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://faustolabruto.com/#person",
-  "name": "Fausto Labruto",
-  "url": "https://faustolabruto.com/",
-  "image": "https://faustolabruto.com/fausto-labruto.jpg.png",
-  "description": "Radiologist, academic, researcher and author specialising in emergency radiology and ancient history.",
-  "jobTitle": [
-    "Radiologist",
-    "Associate Professor of Radiology",
-    "Author"
-  ],
-  "affiliation": [
-    {
-      "@type": "Organization",
-      "name": "Unilabs",
-      "url": "https://www.unilabs.com/"
-    }
-  ],
-  "sameAs": [
-    "https://orcid.org/0009-0004-6510-5812",
-    "https://scholar.google.com/citations?user=MyMecJwAAAAJ&hl=en&oi=ao",
-    "https://www.linkedin.com/in/fausto-labruto-007568142",
-    "https://www.amazon.com/stores/Fausto-Labruto/author/B0CJFJHKTR",
-    "https://www.researchgate.net/profile/Fausto-Labruto",
-    "https://academy.unilabs.com/radiology/mentors/529/fausto-labruto"
-  ]
-}
-</script>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
+<header class="site-header"> <div class="header-inner">
 
-      <div>
-        <!-- EDIT YOUR NAME OR HEADER DESCRIPTION HERE -->
-        <p class="site-title">Fausto Labruto</p>
-        <p class="site-subtitle">
-          Radiology · Academic Research · Medical Education · Ancient History
-        </p>
-      </div>
+  <div>
+    <!-- EDIT YOUR NAME OR HEADER DESCRIPTION HERE -->
+    <p class="site-title">Fausto Labruto</p>
+    <p class="site-subtitle">
+      Radiology · Academic Research · Medical Education · Ancient History
+    </p>
+  </div>
 
-    <nav aria-label="Main navigation">
-  <a href="#about">About</a>
-  <a href="#appointments">Appointments</a>
-  <a href="#research">Research</a>
-  <a href="#books">Books</a>
-  <a href="lectures.html">Lectures & Conferences</a>
-  <a href="#profiles">Profiles</a>
+<nav aria-label="Main navigation">
+<a href="#about">About</a>
+<a href="#appointments">Appointments</a>
+<a href="#research">Research</a>
+<a href="#books">Books</a>
+<a href="lectures.html">Lectures & Conferences</a>
+<a href="#profiles">Profiles</a>
+
 </nav>
 
+</div>
+</header>
+
+<section class="hero"> <div class="hero-inner">
+
+  <div>
+    <!-- EDIT THE MAIN INTRODUCTION HERE -->
+    <p class="hero-label">Official website</p>
+
+    <h1>Fausto Labruto</h1>
+
+    <h2>
+      MD, PhD, Associate Professor of Radiology
+    </h2>
+
+    <p>
+      Director of Emergency Services at TMC, a Unilabs company
+    </p>
+
+    <p>
+      My professional interests include emergency and trauma radiology,
+      international teleradiology, medical education and the responsible
+      application of artificial intelligence in diagnostic imaging.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="button" href="#about">Biography</a>
+      <a class="button secondary" href="#books">Books</a>
     </div>
-  </header>
+  </div>
 
-  <section class="hero">
-    <div class="hero-inner">
+  <div>
+    <!-- CHANGE THE FILENAME HERE IF YOU RENAME YOUR PHOTOGRAPH -->
+    <img
+      class="portrait"
+      src="fausto-labruto.jpg.png"
+      alt="Portrait of Fausto Labruto">
+  </div>
 
-      <div>
-        <!-- EDIT THE MAIN INTRODUCTION HERE -->
-        <p class="hero-label">Official website</p>
+</div>
+</section>
 
-        <h1>Fausto Labruto</h1>
+<main>
 
-        <h2>
-          MD, PhD, Associate Professor of Radiology
-        </h2>
+<section class="content-section" id="about">
+  <div class="section-grid">
 
-        <p>
-          Director of Emergency Services at TMC, a Unilabs company
-        </p>
-
-        <p>
-          My professional interests include emergency and trauma radiology,
-          international teleradiology, medical education and the responsible
-          application of artificial intelligence in diagnostic imaging.
-        </p>
-
-        <div class="hero-buttons">
-          <a class="button" href="#about">Biography</a>
-          <a class="button secondary" href="#books">Books</a>
-        </div>
-      </div>
-
-      <div>
-        <!-- CHANGE THE FILENAME HERE IF YOU RENAME YOUR PHOTOGRAPH -->
-        <img
-          class="portrait"
-          src="fausto-labruto.jpg.png"
-          alt="Portrait of Fausto Labruto">
-      </div>
-
+    <div class="section-heading">
+      <h2>Biography</h2>
     </div>
-  </section>
 
-  <section class="hero">
-  <div class="hero-inner">
-
-    <div>
-      <p class="hero-label">Professional activities</p>
-
-      <h1>Lectures & Conferences</h1>
-
-      <h2>
-        Selected invited lectures and conference presentations
-      </h2>
-
+    <div class="section-content">
+      <!-- EDIT YOUR BIOGRAPHY HERE -->
       <p>
-        A selection of lectures and educational presentations in emergency radiology,
-        trauma imaging, teleradiology and artificial intelligence.
+        Fausto Labruto is a radiologist, academic and author whose
+        professional work combines clinical radiology, academic research,
+        postgraduate education and international teleradiology.
       </p>
 
-      <div class="hero-buttons">
-        <a class="button" href="index.html">Home</a>
-        <a class="button secondary" href="#lectures">View lectures</a>
-      </div>
+      <p>
+        His principal medical interests include emergency radiology,
+        trauma imaging, acute neck imaging, acute and postoperative abdominal imaging and the evaluation and
+        implementation of artificial intelligence in clinical practice.
+      </p>
+
+      <p>
+        Alongside his medical career, he writes about ancient history
+        and languages, with particular interests in the Hittites,
+        and the civilizations of the ancient Mediterranean and Near East.
+      </p>
     </div>
 
   </div>
 </section>
 
-<main>
+<section class="content-section" id="appointments">
+  <div class="section-grid">
 
-  <section id="lectures">
+    <div class="section-heading">
+      <h2>Academic and professional appointments</h2>
+    </div>
 
-    <h2>Selected Lectures</h2>
+    <div class="section-content">
 
-    <h3>Imaging in the Trauma Room</h3>
+      <!-- EDIT OR ADD PROFESSIONAL APPOINTMENTS HERE -->
+      <div class="academic-entry">
+        <h3>Karolinska Institutet</h3>
+        <p class="position">Associate Professor of Radiology</p>
+        <p>
+          Affiliated from 2012 to 2018
+        </p>
+      </div>
 
-    <p>
-      Trauma Radiology 2024, Nordic Trauma Radiology.
-    </p>
+      <div class="academic-entry">
+        <h3>TMC, a Unilabs company</h3>
+        <p class="position">Director of Emergency Services</p>
+        <p>
+          Current
+        </p>
+      </div>
 
-    <p>
-      Invited lecture on imaging strategies and the role of radiology
-      in the acute assessment of trauma patients.
-    </p>
+    </div>
 
-    <p>
-      <a href="https://www.nordictraumarad.com/courses/trauma-radiology-2024/">
-        Conference programme
-      </a>
-      ·
-      <a href="https://assets.ctfassets.net/ikrr9ebmfi75/2TaFfo0ZiYazHJIMVOhOzO/eaee998f5cee4d9cf4d9b5d523baeeb5/Thurs13_Imaging_in_the_Trauma_Room_Labruto.pdf">
-        View presentation
-      </a>
-    </p>
+  </div>
+</section>
 
-  </section>
+<section class="content-section" id="research">
+  <div class="section-grid">
 
+    <div class="section-heading">
+      <h2>Research and teaching</h2>
+    </div>
+
+    <div class="section-content">
+
+      <!-- EDIT YOUR RESEARCH DESCRIPTION HERE -->
+      <div class="academic-entry">
+        <h3>Emergency and trauma radiology</h3>
+        <p>
+          Research, clinical development and postgraduate teaching
+          concerning acute imaging, trauma and emergency care.
+        </p>
+      </div>
+
+      <div class="academic-entry">
+        <h3>Artificial intelligence in radiology</h3>
+        <p>
+          Evaluation, implementation, transparency and real-world
+          monitoring of artificial intelligence systems in diagnostic
+          radiology.
+        </p>
+      </div>
+
+      <div class="academic-entry">
+        <h3>International medical education</h3>
+        <p>
+          Lectures, conference teaching, mentorship and academic
+          collaboration in emergency radiology and related fields.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-section" id="books">
+  <div class="section-grid">
+
+    <div class="section-heading">
+      <h2>Books</h2>
+    </div>
+
+    <div class="section-content">
+
+      <!-- EDIT BOOK INFORMATION HERE -->
+      <article class="book">
+        <h3>The Quest for the Hittites</h3>
+        <p class="book-meta">McFarland, 2023</p>
+        <p>
+          A history of the rediscovery of the Hittite civilization and
+          the scholars, explorers and archaeologists who reconstructed
+          its forgotten past.
+        </p>
+      </article>
+
+     </div>
+
+  </div>
+</section>
+
+<section class="content-section" id="profiles">
+  <div class="section-grid">
+
+    <div class="section-heading">
+      <h2>Professional profiles</h2>
+    </div>
+
+    <div class="section-content">
+
+      <div class="profile-links">
+
+        <a href="https://orcid.org/0009-0004-6510-5812"
+           target="_blank"
+           rel="noopener">
+          ORCID
+        </a>
+
+        <!-- REPLACE THIS WITH YOUR GOOGLE SCHOLAR ADDRESS -->
+        <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=MyMecJwAAAAJ"
+           target="_blank"
+           rel="noopener">
+          Google Scholar
+        </a>
+
+        <a href="https://au.linkedin.com/in/fausto-labruto-007568142"
+           target="_blank"
+           rel="noopener">
+          LinkedIn
+        </a>
+
+        <a href="https://www.researchgate.net/profile/Fausto-Labruto"
+           target="_blank"
+           rel="noopener">
+          ResearchGate
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-section" id="contact">
+  <div class="section-grid">
+
+    <div class="section-heading">
+      <h2>Contact</h2>
+    </div>
+
+    <div class="section-content">
+      <!-- EDIT YOUR CONTACT INFORMATION HERE -->
+      <div class="contact-note">
+        For academic, professional, publishing or speaking enquiries,
+        please contact me through LinkedIn. 
+      </div>
+    </div>
+
+  </div>
+</section>
 </main>
 
-  <footer>
-    © 2026 Fausto Labruto. All rights reserved.
-  </footer>
+<footer> © 2026 Fausto Labruto. All rights reserved. </footer>
 
-</body>
-</html>
+</body> </html>
+
+
+Close
