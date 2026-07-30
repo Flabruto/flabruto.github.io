@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ancient studies | Fausto Labruto</title>
+
+  <meta name="description"
+        content="Selected invited lectures, conference presentations and educational activities by Fausto Labruto in emergency radiology, trauma imaging and artificial intelligence.">
+<style>
+    :root {
+      --navy: #18324a;
+      --navy-dark: #102536;
+      --gold: #a8874d;
+      --paper: #f5f3ee;
+      --white: #ffffff;
+      --text: #292929;
+      --muted: #646464;
+      --border: #d8d3c9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--navy);
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .header-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 1.55rem;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+.site-title a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: #f0d8aa;
+}
+    .site-subtitle {
+      margin: 3px 0 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.83rem;
+      color: #dbe3e9;
+      letter-spacing: 0.4px;
+    }
+
+    nav {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      color: #f0d8aa;
+    }
+
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+   .hero-inner {
+  width: min(1120px, 88%);
+  margin: auto;
+  padding: 72px 0;
+  display: block;
+}
+
+    .hero-label {
+      margin: 0 0 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .hero h2 {
+      margin: 0 0 27px;
+      color: var(--muted);
+      font-size: 1.3rem;
+      font-weight: normal;
+      line-height: 1.45;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 20px;
+      margin: 0 10px 10px 0;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .button:hover {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .button.secondary:hover {
+      background: #edf1f4;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 8px solid var(--white);
+      outline: 1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    main {
+      width: min(1120px, 88%);
+      margin: auto;
+    }
+
+    .content-section {
+      padding: 67px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 65px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      margin-top: 18px;
+      background: var(--gold);
+    }
+
+    .section-content p:first-child {
+      margin-top: 0;
+    }
+
+    .academic-entry {
+      margin-bottom: 32px;
+    }
+
+    .academic-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .academic-entry h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    .academic-entry .position {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .academic-entry p {
+      margin: 0;
+    }
+
+    .book {
+      padding: 0 0 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .book:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .book h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .book-meta {
+      margin: 0 0 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .profile-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 14px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .profile-links a {
+      padding: 11px 0;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-note {
+      background: var(--white);
+      padding: 25px 28px;
+      border-left: 4px solid var(--gold);
+    }
+
+    footer {
+      margin-top: 0;
+      padding: 34px 6%;
+      background: var(--navy-dark);
+      color: #d9e0e5;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+    }
+.lecture-card {
+  background: var(--white);
+  padding: 30px 32px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.lecture-card h3 {
+  margin-top: 0;
+  font-size: 1.45rem;
+}
+
+.lecture-card .hero-buttons {
+  margin-top: 22px;
+}
+    @media (max-width: 850px) {
+      .header-inner {
+        padding: 22px 0;
+        display: block;
+      }
+
+      nav {
+        margin-top: 18px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 18px 5px 0;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .portrait {
+        width: min(310px, 100%);
+        height: 390px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-inner {
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.1rem;
+      }
+
+      .profile-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="header-inner">
+
+      <div>
+        <!-- EDIT YOUR NAME OR HEADER DESCRIPTION HERE -->
+        <p class="site-title">
+  <a href="index.html">Fausto Labruto</a>
+</p>
+        <p class="site-subtitle">
+          Radiology · Academic Research · Medical Education · Ancient History
+        </p>
+      </div>
+
+     </div>
+  </header>
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <div>
+  <h1>Ancient studies</h1>
+
+  <h2>Books · Profiles · Press</h2>
+</div>
+
+  </div>
+</section>
+
+<main>
+
+  <section id="lectures" class="content-section">
+
+    <div class="section-grid">
+
+      <div class="section-heading">
+        <h2>Selected Lectures</h2>
+      </div>
+
+      <div class="section-content">
+
+     <div class="academic-entry lecture-card">
+
+  <h3>Imaging in the Trauma Room</h3>
+
+  <p class="position">
+    Trauma Radiology 2024 · Nordic Forum for Trauma and Emergency Radiology · Stockholm, Sweden
+  </p>
+
+  <p>
+    Invited lecture on imaging strategies and the role of radiology
+    in the acute assessment of trauma patients.
+  </p>
+
+  <div class="hero-buttons">
+
+    <a class="button"
+       href="https://www.nordictraumarad.com/courses/trauma-radiology-2024/"
+       target="_blank"
+       rel="noopener">
+      Conference programme
+    </a>
+
+    <a class="button secondary"
+       href="https://assets.ctfassets.net/ikrr9ebmfi75/2TaFfo0ZiYazHJIMVOhOzO/eaee998f5cee4d9cf4d9b5d523baeeb5/Thurs13_Imaging_in_the_Trauma_Room_Labruto.pdf"
+       target="_blank"
+       rel="noopener">
+      View presentation
+    </a>
+
+  </div>
+
+</div>
+
+<div class="academic-entry lecture-card">
+
+  <h3>Trauma: From the Past to the Future</h3>
+
+  <p class="position">
+    Trauma Radiology 2024 · Nordic Forum for Trauma and Emergency Radiology · Stockholm, Sweden
+  </p>
+
+  <p>
+    Invited lecture exploring the historical development of trauma care
+    and imaging, from early descriptions of traumatic injury to modern
+    approaches in emergency radiology.
+  </p>
+
+  <div class="hero-buttons">
+
+    <a class="button"
+       href="https://www.nordictraumarad.com/courses/trauma-radiology-2024/"
+       target="_blank"
+       rel="noopener">
+      Conference programme
+    </a>
+
+    <a class="button secondary"
+       href="https://assets.ctfassets.net/ikrr9ebmfi75/jl1LEZwjJ9HidCWgf0viY/2c56e38d30ff6b952984bcf0f6ab0777/Mon10_Trauma_from_the_Past_to_the_Future_Labruto.pdf"
+       target="_blank"
+       rel="noopener">
+      View presentation
+    </a>
+
+  </div>
+
+</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+<section id="press" class="content-section">
+
+  <div class="section-grid">
+
+    <div class="section-heading">
+      <h2>Press</h2>
+    </div>
+
+    <div class="section-content">
+
+      <div class="academic-entry">
+        <h3>Teleradiologiföretag etablerar sig i Japan – söker radiologer</h3>
+
+        <p class="position">
+          Läkartidningen · 30 July 2025
+        </p>
+
+        <p>
+          Interview on international teleradiology and the expansion of
+          Telemedicine Clinic's operations to Japan.
+        </p>
+
+        <p>
+          <a href="https://lakartidningen.se/nyheter/teleradiologi-foretag-etablerar-sig-i-japan-soker-radiologer/"
+             target="_blank"
+             rel="noopener">
+            Read article
+          </a>
+        </p>
+      </div>
+
+      <div class="academic-entry">
+        <h3>How can we measure happiness in radiology?</h3>
+
+        <p class="position">
+          AuntMinnieEurope · 8 July 2025
+        </p>
+
+        <p>
+          Article discussing happiness and well-being in radiology,
+          based on my opinion article published in the European Journal of Radiology.
+        </p>
+
+        <p>
+          <a href="https://www.auntminnieeurope.com/medical-legal-and-practice/article/15750126/how-can-we-measure-happiness-in-radiology"
+             target="_blank"
+             rel="noopener">
+            Read article
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</main>
+</body>
+</html>
