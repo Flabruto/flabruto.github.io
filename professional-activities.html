@@ -66,20 +66,14 @@
       font-weight: normal;
       letter-spacing: 0.5px;
     }
-.site-title a {
-  color: var(--white);
-  text-decoration: none;
-}
 
-.site-title a:hover {
-  color: #f0d8aa;
-}
-    .site-subtitle {
-      margin: 3px 0 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.83rem;
-      color: #dbe3e9;
-      letter-spacing: 0.4px;
+    .site-title a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .site-title a:hover {
+      color: #f0d8aa;
     }
 
     nav {
@@ -102,21 +96,11 @@
       border-bottom: 1px solid var(--border);
     }
 
-   .hero-inner {
-  width: min(1120px, 88%);
-  margin: auto;
-  padding: 72px 0;
-  display: block;
-}
-
-    .hero-label {
-      margin: 0 0 12px;
-      font-family: Arial, Helvetica, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      color: var(--gold);
-      font-size: 0.78rem;
-      font-weight: bold;
+    .hero-inner {
+      width: min(1120px, 88%);
+      margin: auto;
+      padding: 72px 0;
+      display: block;
     }
 
     .hero h1 {
@@ -133,53 +117,6 @@
       font-size: 1.3rem;
       font-weight: normal;
       line-height: 1.45;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 0 0 18px;
-      font-size: 1.08rem;
-    }
-
-    .hero-buttons {
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 20px;
-      margin: 0 10px 10px 0;
-      border: 1px solid var(--navy);
-      background: var(--navy);
-      color: var(--white);
-      text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-    }
-
-    .button:hover {
-      background: var(--navy-dark);
-      color: var(--white);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--navy);
-    }
-
-    .button.secondary:hover {
-      background: #edf1f4;
-    }
-
-    .portrait {
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      border: 8px solid var(--white);
-      outline: 1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.13);
     }
 
     main {
@@ -215,10 +152,6 @@
       background: var(--gold);
     }
 
-    .section-content p:first-child {
-      margin-top: 0;
-    }
-
     .academic-entry {
       margin-bottom: 32px;
     }
@@ -245,76 +178,45 @@
       margin: 0;
     }
 
-    .book {
-      padding: 0 0 28px;
-      margin-bottom: 28px;
-      border-bottom: 1px solid var(--border);
+    .year-block {
+      margin-bottom: 52px;
     }
 
-    .book:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
+    .year-block:last-child {
       margin-bottom: 0;
     }
 
-    .book h3 {
-      margin: 0 0 5px;
-      color: var(--navy);
-      font-size: 1.35rem;
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    .book-meta {
-      margin: 0 0 10px;
+    .year-title {
+      margin: 0 0 24px;
+      color: var(--gold);
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 1.05rem;
+      letter-spacing: 1.2px;
+      font-weight: bold;
     }
 
-    .profile-links {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(180px, 1fr));
-      gap: 14px 30px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .profile-links a {
-      padding: 11px 0;
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .contact-note {
+    .lecture-card {
       background: var(--white);
-      padding: 25px 28px;
+      padding: 26px 30px;
       border-left: 4px solid var(--gold);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      margin-bottom: 22px;
     }
 
-    footer {
+    .lecture-card h3 {
       margin-top: 0;
-      padding: 34px 6%;
-      background: var(--navy-dark);
-      color: #d9e0e5;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
+      font-size: 1.35rem;
     }
-.lecture-card {
-  background: var(--white);
-  padding: 30px 32px;
-  border-left: 4px solid var(--gold);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
 
-.lecture-card h3 {
-  margin-top: 0;
-  font-size: 1.45rem;
-}
+    .lecture-list {
+      margin: 12px 0 0;
+      padding-left: 21px;
+    }
 
-.lecture-card .hero-buttons {
-  margin-top: 22px;
-}
+    .lecture-list li {
+      margin: 5px 0;
+    }
+
     @media (max-width: 850px) {
       .header-inner {
         padding: 22px 0;
@@ -328,16 +230,6 @@
       nav a {
         display: inline-block;
         margin: 5px 18px 5px 0;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 42px;
-      }
-
-      .portrait {
-        width: min(310px, 100%);
-        height: 390px;
       }
 
       .section-grid {
@@ -355,8 +247,8 @@
         font-size: 3.1rem;
       }
 
-      .profile-links {
-        grid-template-columns: 1fr;
+      .lecture-card {
+        padding: 22px 24px;
       }
     }
   </style>
@@ -387,9 +279,7 @@
 
     <div>
       <h1>Professional activities</h1>
-
-     <h2>Lectures &amp; Conferences · Press</h2>
-
+      <h2>Lectures &amp; Conferences · Press</h2>
     </div>
 
   </div>
@@ -402,77 +292,85 @@
     <div class="section-grid">
 
       <div class="section-heading">
-        <h2>Selected Lectures</h2>
+        <h2>Invited Lectures &amp; Conference Presentations</h2>
       </div>
 
       <div class="section-content">
 
-     <div class="academic-entry lecture-card">
+        <div class="year-block">
+          <div class="year-title">2026</div>
 
-  <h3>Imaging in the Trauma Room</h3>
+          <div class="academic-entry lecture-card">
+            <h3>Nordic Forum for Trauma and Emergency Radiology</h3>
+            <p class="position">Helsinki, Finland · May 2026</p>
+            <ul class="lecture-list">
+              <li>Imaging after prostatectomy</li>
+              <li>Gender-affirming surgery for the emergency radiologist</li>
+              <li>Caesarean section complications</li>
+              <li>Lines and tubes in neonatal chest X-ray</li>
+            </ul>
+          </div>
 
-  <p class="position">
-    Trauma Radiology 2024 · Nordic Forum for Trauma and Emergency Radiology · Stockholm, Sweden
-  </p>
+          <div class="academic-entry lecture-card">
+            <h3>Indian Society of Emergency Radiology</h3>
+            <p class="position">Rishikesh, India · 5–6 September 2026</p>
+            <ul class="lecture-list">
+              <li>Imaging after prostatectomy</li>
+              <li>Imaging after pancreatic surgery</li>
+            </ul>
+          </div>
 
-  <p>
-    Invited lecture on imaging strategies and the role of radiology
-    in the acute assessment of trauma patients.
-  </p>
+          <div class="academic-entry lecture-card">
+            <h3>Röntgenveckan 2026</h3>
+            <p class="position">Gothenburg, Sweden · 10 September 2026</p>
+            <ul class="lecture-list">
+              <li>Scalable Implementation and Monitoring of Clinical AI</li>
+            </ul>
+          </div>
 
-  <div class="hero-buttons">
+          <div class="academic-entry lecture-card">
+            <h3>European Society of Emergency Radiology — ESER 2026</h3>
+            <p class="position">Budapest, Hungary · 22–24 October 2026</p>
+            <ul class="lecture-list">
+              <li>Vascular syndromes in emergency neck radiology</li>
+            </ul>
+          </div>
+        </div>
 
-    <a class="button"
-       href="https://www.nordictraumarad.com/courses/trauma-radiology-2024/"
-       target="_blank"
-       rel="noopener">
-      Conference programme
-    </a>
+        <div class="year-block">
+          <div class="year-title">2025</div>
 
-    <a class="button secondary"
-       href="https://assets.ctfassets.net/ikrr9ebmfi75/2TaFfo0ZiYazHJIMVOhOzO/eaee998f5cee4d9cf4d9b5d523baeeb5/Thurs13_Imaging_in_the_Trauma_Room_Labruto.pdf"
-       target="_blank"
-       rel="noopener">
-      View presentation
-    </a>
+          <div class="academic-entry lecture-card">
+            <h3>Nordic Forum for Trauma and Emergency Radiology</h3>
+            <p class="position">Oslo, Norway · 2–5 June 2025</p>
+            <ul class="lecture-list">
+              <li>Abdominal aortic aneurysms: After the fact</li>
+              <li>Urinary diversions: a roadmap</li>
+            </ul>
+          </div>
 
-  </div>
+          <div class="academic-entry lecture-card">
+            <h3>Röntgenveckan 2025</h3>
+            <p class="position">Stockholm, Sweden · 11 September 2025</p>
+            <ul class="lecture-list">
+              <li>Från Himalaya till din röntgenavdelning: Radiologins lycka</li>
+            </ul>
+          </div>
+        </div>
 
-</div>
+        <div class="year-block">
+          <div class="year-title">2024</div>
 
-<div class="academic-entry lecture-card">
-
-  <h3>Trauma: From the Past to the Future</h3>
-
-  <p class="position">
-    Trauma Radiology 2024 · Nordic Forum for Trauma and Emergency Radiology · Stockholm, Sweden
-  </p>
-
-  <p>
-    Invited lecture exploring the historical development of trauma care
-    and imaging, from early descriptions of traumatic injury to modern
-    approaches in emergency radiology.
-  </p>
-
-  <div class="hero-buttons">
-
-    <a class="button"
-       href="https://www.nordictraumarad.com/courses/trauma-radiology-2024/"
-       target="_blank"
-       rel="noopener">
-      Conference programme
-    </a>
-
-    <a class="button secondary"
-       href="https://assets.ctfassets.net/ikrr9ebmfi75/jl1LEZwjJ9HidCWgf0viY/2c56e38d30ff6b952984bcf0f6ab0777/Mon10_Trauma_from_the_Past_to_the_Future_Labruto.pdf"
-       target="_blank"
-       rel="noopener">
-      View presentation
-    </a>
-
-  </div>
-
-</div>
+          <div class="academic-entry lecture-card">
+            <h3>Nordic Forum for Trauma and Emergency Radiology</h3>
+            <p class="position">Stockholm, Sweden · 10–13 June 2024</p>
+            <ul class="lecture-list">
+              <li>Trauma from the Past to the Future</li>
+              <li>Imaging in the Trauma Room</li>
+              <li>Teleradiology in Trauma</li>
+              <li>Patterns of Error in Trauma</li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -480,63 +378,65 @@
     </div>
 
   </section>
-<section id="press" class="content-section">
 
-  <div class="section-grid">
+  <section id="press" class="content-section">
 
-    <div class="section-heading">
-      <h2>Press</h2>
-    </div>
+    <div class="section-grid">
 
-    <div class="section-content">
-
-      <div class="academic-entry">
-        <h3>Teleradiologiföretag etablerar sig i Japan – söker radiologer</h3>
-
-        <p class="position">
-          Läkartidningen · 30 July 2025
-        </p>
-
-        <p>
-          Interview on international teleradiology and the expansion of
-          Telemedicine Clinic's operations to Japan.
-        </p>
-
-        <p>
-          <a href="https://lakartidningen.se/nyheter/teleradiologi-foretag-etablerar-sig-i-japan-soker-radiologer/"
-             target="_blank"
-             rel="noopener">
-            Read article
-          </a>
-        </p>
+      <div class="section-heading">
+        <h2>Press</h2>
       </div>
 
-      <div class="academic-entry">
-        <h3>How can we measure happiness in radiology?</h3>
+      <div class="section-content">
 
-        <p class="position">
-          AuntMinnieEurope · 8 July 2025
-        </p>
+        <div class="academic-entry">
+          <h3>Teleradiologiföretag etablerar sig i Japan – söker radiologer</h3>
 
-        <p>
-          Article discussing happiness and well-being in radiology,
-          based on my opinion article published in the European Journal of Radiology.
-        </p>
+          <p class="position">
+            Läkartidningen · 30 July 2025
+          </p>
 
-        <p>
-          <a href="https://www.auntminnieeurope.com/medical-legal-and-practice/article/15750126/how-can-we-measure-happiness-in-radiology"
-             target="_blank"
-             rel="noopener">
-            Read article
-          </a>
-        </p>
+          <p>
+            Interview on international teleradiology and the expansion of
+            Telemedicine Clinic's operations to Japan.
+          </p>
+
+          <p>
+            <a href="https://lakartidningen.se/nyheter/teleradiologi-foretag-etablerar-sig-i-japan-soker-radiologer/"
+               target="_blank"
+               rel="noopener">
+              Read article
+            </a>
+          </p>
+        </div>
+
+        <div class="academic-entry">
+          <h3>How can we measure happiness in radiology?</h3>
+
+          <p class="position">
+            AuntMinnieEurope · 8 July 2025
+          </p>
+
+          <p>
+            Article discussing happiness and well-being in radiology,
+            based on my opinion article published in the European Journal of Radiology.
+          </p>
+
+          <p>
+            <a href="https://www.auntminnieeurope.com/medical-legal-and-practice/article/15750126/how-can-we-measure-happiness-in-radiology"
+               target="_blank"
+               rel="noopener">
+              Read article
+            </a>
+          </p>
+        </div>
+
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
 </main>
 </body>
 </html>
